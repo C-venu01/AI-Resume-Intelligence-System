@@ -1,149 +1,216 @@
 🤖 AI Resume Intelligence Platform – Multi-Resume Batch Analyzer
 
-An AI-powered resume screening system that analyzes multiple resumes in batch, extracts key candidate information, ranks candidates automatically, and provides quick interviewer insights — all without requiring paid APIs.
+An intelligent, end-to-end AI-powered resume screening platform that performs batch analysis of resumes, extracts structured candidate information, ranks applicants automatically, and provides quick interviewer-ready insights.
 
-This project focuses on local analysis using NLP techniques, regex, and keyword matching, making it fast, lightweight, and cost-free.
+This system uses local NLP processing, regex-based information extraction, and heuristic scoring to deliver fast, accurate, and cost-free resume intelligence without requiring any paid APIs.
 
-🚀 Features
+📌 Problem Statement
+
+Recruiters and placement coordinators manually screen hundreds of resumes, which is:
+
+Time-consuming
+
+Error-prone
+
+Inconsistent
+
+There is a need for a lightweight automated system that can:
+
+✔ Analyze resumes in bulk
+✔ Extract key candidate attributes
+✔ Rank candidates objectively
+✔ Provide quick summaries for interviewers
+
+🎯 Solution
+
+The AI Resume Intelligence Platform automates resume screening by:
+
+Accepting multiple resume PDFs
+
+Extracting raw text
+
+Performing local NLP-based parsing
+
+Computing a weighted score
+
+Ranking candidates instantly
+
+The platform provides structured, transparent, and explainable results suitable for real-world hiring and campus recruitment.
+
+🚀 Key Features
 
 📂 Upload multiple resume PDFs
 
-🧠 Automatically extract:
+🧠 Automatic extraction of:
 
-Name, Email, Phone
+Name
 
-Experience & Experience Level
+Email
 
-Specialization / Role
+Phone number
 
-Technologies & Skills
+Experience years
+
+Experience level
+
+Specialization / role
+
+Technologies & skills
 
 Projects count
 
-CGPA (if available)
+CGPA (if present)
 
 Education
 
-📊 Intelligent scoring & ranking (0–100)
+📊 Intelligent scoring (0–100)
 
-🏆 Candidates sorted by overall score
+🏆 Automatic candidate ranking
 
-📋 Quick interviewer summary for each candidate
+📋 Interviewer-ready summaries
 
 📤 Export results as JSON
 
-⚡ Runs fully offline (no API required)
+⚡ Fully offline execution (no paid APIs)
 
 🖥️ Tech Stack
+Layer	Technology
+Language	Python
+Frontend	Streamlit
+PDF Parsing	PyPDF2
+NLP	Regex + Keyword Matching
+Data Format	JSON
+🏗️ System Architecture
+User Uploads PDFs
+        |
+        v
+PDF Text Extraction (PyPDF2)
+        |
+        v
+Local NLP Processing
+(Regex + Keyword Matching)
+        |
+        v
+Feature Extraction
+(Name, Skills, Experience, CGPA...)
+        |
+        v
+Scoring Engine
+        |
+        v
+Candidate Ranking
+        |
+        v
+Streamlit Dashboard
 
-Python
+🔁 Workflow
 
-Streamlit
+User uploads multiple resume PDFs
 
-PyPDF2
+Text is extracted from each PDF
 
-Regex (re)
+Resume analyzer extracts fields
+
+Scoring engine assigns score
+
+Candidates sorted by score
+
+Results displayed and exportable
 
 📁 Project Structure
 AI-Resume-Intelligence-System/
 │
-├── app.py
-├── requirements.txt
+├── app.py              # Main application
+├── requirements.txt   # Dependencies
 └── README.md
 
-⚙️ Installation
+⚙️ Installation & Setup
 1️⃣ Clone Repository
 git clone https://github.com/C-venu01/AI-Resume-Intelligence-System.git
 cd AI-Resume-Intelligence-System
 
 2️⃣ Create Virtual Environment (Optional)
 python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate    # Mac/Linux
+venv\Scripts\activate
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-▶️ Run Application
+4️⃣ Run Application
 streamlit run app.py
 
 
-Open browser at:
+Open in browser:
 
 http://localhost:8501
 
-📌 How It Works
-
-Upload multiple resume PDFs
-
-System extracts text from each PDF
-
-Local analyzer detects skills, experience, CGPA, and projects
-
-Each resume receives a score (0–100)
-
-Candidates are ranked automatically
-
-Expand any candidate to view full insights
-
-📊 Scoring Logic (Simplified)
-Factor	Points
+📊 Scoring Methodology
+Component	Points
 Base Score	50
-Each Technology	+3
-Experience (per year)	+5
-Each Achievement	+5
-Each Project	+2
+Each detected technology	+3
+Each year of experience	+5
+Each achievement	+5
+Each project	+2
 CGPA > 7	+10
-Max Score	100
-🧠 Example Output
-
-Candidate Name
-
-ML/AI Engineer
-
-4 Years Experience
-
-Skills: Python, ML, TensorFlow, SQL
-
+Maximum	100
+🧠 Example Candidate Output
+Name: Rahul Kumar
+Specialization: ML/AI Engineer
+Experience: 4 Years
+Skills: Python, TensorFlow, SQL
 Projects: 5
-
 CGPA: 8.2
-
 Overall Score: 86/100
 
 🎯 Use Cases
 
-College placement screening
+Campus placement screening
 
-Internship shortlisting
+Internship filtering
 
-HR recruitment automation
+HR shortlisting
 
-Hackathon & competition evaluations
+Hackathons & competitions
 
-🔐 No Paid APIs Required
+Resume quality auditing
 
-The system uses local rule-based analysis, so:
+🧪 Testing
 
-✔ No OpenAI key needed
-✔ No usage limits
-✔ No billing
+Tested with resumes in:
 
-(Optional OpenAI key field exists only for future expansion.)
+PDF text format
+
+Multi-page resumes
+
+Freshers & experienced profiles
+
+⚠️ Limitations
+
+Image-based scanned PDFs not supported
+
+Rule-based skill detection (not semantic)
+
+No database storage (in-memory only)
 
 📈 Future Enhancements
 
-Skill gap recommendations
+Semantic NLP using embeddings
 
-Role-based filtering
+Role-based scoring profiles
 
-CSV / Excel export
-
-Dashboard analytics
+Skill-gap roadmap generation
 
 Resume similarity detection
 
-Database storage
+CSV / Excel export
+
+Database integration
+
+Admin dashboard
+
+🧾 Resume Description (For Your CV)
+
+Built an AI-powered batch resume analysis platform using Python and Streamlit that extracts candidate data, scores resumes, ranks applicants, and generates interviewer-ready insights. Implemented NLP-based parsing, regex extraction, and heuristic scoring achieving automated resume screening without paid APIs.
 
 👨‍💻 Author
 
