@@ -1,142 +1,60 @@
 🤖 AI Resume Intelligence Platform – Multi-Resume Batch Analyzer
 
-An intelligent, end-to-end AI-powered resume screening platform that performs batch analysis of resumes, extracts structured candidate information, ranks applicants automatically, and provides quick interviewer-ready insights.
+An AI-powered resume screening system that analyzes multiple resumes, extracts key candidate information, ranks candidates automatically, and provides quick interviewer insights.
 
-This system uses local NLP processing, regex-based information extraction, and heuristic scoring to deliver fast, accurate, and cost-free resume intelligence without requiring any paid APIs.
+Built using local NLP, regex, and keyword matching, making it fast, lightweight, and completely free from paid APIs.
 
-📌 Problem Statement
+🚀 Features
 
-Recruiters and placement coordinators manually screen hundreds of resumes, which is:
+Upload multiple resume PDFs
 
-Time-consuming
+Automatic extraction of:
 
-Error-prone
+Name, Email, Phone
 
-Inconsistent
+Experience & Experience Level
 
-There is a need for a lightweight automated system that can:
+Specialization / Role
 
-✔ Analyze resumes in bulk
-✔ Extract key candidate attributes
-✔ Rank candidates objectively
-✔ Provide quick summaries for interviewers
+Skills & Technologies
 
-🎯 Solution
+Projects Count
 
-The AI Resume Intelligence Platform automates resume screening by:
-
-Accepting multiple resume PDFs
-
-Extracting raw text
-
-Performing local NLP-based parsing
-
-Computing a weighted score
-
-Ranking candidates instantly
-
-The platform provides structured, transparent, and explainable results suitable for real-world hiring and campus recruitment.
-
-🚀 Key Features
-
-📂 Upload multiple resume PDFs
-
-🧠 Automatic extraction of:
-
-Name
-
-Email
-
-Phone number
-
-Experience years
-
-Experience level
-
-Specialization / role
-
-Technologies & skills
-
-Projects count
-
-CGPA (if present)
+CGPA (if available)
 
 Education
 
-📊 Intelligent scoring (0–100)
+Intelligent scoring (0–100)
 
-🏆 Automatic candidate ranking
+Automatic ranking of candidates
 
-📋 Interviewer-ready summaries
+Quick interviewer summary
 
-📤 Export results as JSON
+Export results as JSON
 
-⚡ Fully offline execution (no paid APIs)
+Works fully offline
 
-🖥️ Tech Stack
-Layer	Technology
-Language	Python
-Frontend	Streamlit
-PDF Parsing	PyPDF2
-NLP	Regex + Keyword Matching
-Data Format	JSON
-🏗️ System Architecture
-User Uploads PDFs
-        |
-        v
-PDF Text Extraction (PyPDF2)
-        |
-        v
-Local NLP Processing
-(Regex + Keyword Matching)
-        |
-        v
-Feature Extraction
-(Name, Skills, Experience, CGPA...)
-        |
-        v
-Scoring Engine
-        |
-        v
-Candidate Ranking
-        |
-        v
-Streamlit Dashboard
+🖥 Tech Stack
 
-🔁 Workflow
+Python
 
-User uploads multiple resume PDFs
+Streamlit
 
-Text is extracted from each PDF
+PyPDF2
 
-Resume analyzer extracts fields
-
-Scoring engine assigns score
-
-Candidates sorted by score
-
-Results displayed and exportable
+Regex
 
 📁 Project Structure
 AI-Resume-Intelligence-System/
 │
-├── app.py              # Main application
-├── requirements.txt   # Dependencies
+├── app.py
+├── requirements.txt
 └── README.md
 
-⚙️ Installation & Setup
-1️⃣ Clone Repository
+⚙️ Installation & Run
 git clone https://github.com/C-venu01/AI-Resume-Intelligence-System.git
 cd AI-Resume-Intelligence-System
-
-2️⃣ Create Virtual Environment (Optional)
-python -m venv venv
-venv\Scripts\activate
-
-3️⃣ Install Dependencies
 pip install -r requirements.txt
-
-4️⃣ Run Application
 streamlit run app.py
 
 
@@ -144,73 +62,40 @@ Open in browser:
 
 http://localhost:8501
 
-📊 Scoring Methodology
-Component	Points
-Base Score	50
-Each detected technology	+3
-Each year of experience	+5
-Each achievement	+5
-Each project	+2
-CGPA > 7	+10
-Maximum	100
-🧠 Example Candidate Output
-Name: Rahul Kumar
-Specialization: ML/AI Engineer
-Experience: 4 Years
-Skills: Python, TensorFlow, SQL
-Projects: 5
-CGPA: 8.2
-Overall Score: 86/100
+📌 How It Works
 
+Upload multiple resumes
+
+Text is extracted from PDFs
+
+Local analyzer detects skills, experience, CGPA, and projects
+
+Each resume gets a score (0–100)
+
+Candidates are ranked automatically
+
+📊 Scoring Logic
+Factor	Points
+Base Score	50
+Each Technology	+3
+Experience (per year)	+5
+Each Achievement	+5
+Each Project	+2
+CGPA > 7	+10
+Max Score	100
 🎯 Use Cases
 
-Campus placement screening
+College placement screening
 
-Internship filtering
+Internship shortlisting
 
-HR shortlisting
+HR recruitment automation
 
-Hackathons & competitions
+🔐 No Paid APIs
 
-Resume quality auditing
-
-🧪 Testing
-
-Tested with resumes in:
-
-PDF text format
-
-Multi-page resumes
-
-Freshers & experienced profiles
-
-⚠️ Limitations
-
-Image-based scanned PDFs not supported
-
-Rule-based skill detection (not semantic)
-
-No database storage (in-memory only)
-
-📈 Future Enhancements
-
-Semantic NLP using embeddings
-
-Role-based scoring profiles
-
-Skill-gap roadmap generation
-
-Resume similarity detection
-
-CSV / Excel export
-
-Database integration
-
-Admin dashboard
-
-🧾 Resume Description (For Your CV)
-
-Built an AI-powered batch resume analysis platform using Python and Streamlit that extracts candidate data, scores resumes, ranks applicants, and generates interviewer-ready insights. Implemented NLP-based parsing, regex extraction, and heuristic scoring achieving automated resume screening without paid APIs.
+✔ No OpenAI key required
+✔ No billing
+✔ No usage limits
 
 👨‍💻 Author
 
