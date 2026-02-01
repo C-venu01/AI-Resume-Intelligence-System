@@ -13,7 +13,6 @@ from datetime import datetime
 import time
 import re
 
-
 # ==================== CONFIGURATION ====================
 
 ANALYSIS_PROMPT = """Analyze this resume and extract key information. Return ONLY a JSON object with no markdown, no backticks, no extra text.
